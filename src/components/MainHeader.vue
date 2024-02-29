@@ -21,7 +21,6 @@
 </template>
 
 <script setup>
-import { defineEmits} from 'vue';
 const changeColor = () => {
     const color = document.getElementById('colorpicker').value;
     document.documentElement.style.setProperty('--button-color', color);
