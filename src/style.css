@@ -971,7 +971,7 @@ img {
   width: 100%;
   padding: 30px 50px;
   overflow: auto;
-  display: none;
+  /* display: none; */
 }
 .calendar-container.calendar-show {
   display: flex;
@@ -1118,6 +1118,7 @@ img {
     opacity: 0;
   }
 }
+
 /* 滚动槽 */
 ::-webkit-scrollbar {
   width: 6px;
