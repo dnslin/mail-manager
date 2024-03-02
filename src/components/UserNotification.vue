@@ -8,7 +8,8 @@
             </svg>
         </div>
         <div class="notify alert">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"
+                :class="{ 'clicked': isClicked.svg2 }" @click="handleEmailNotification('svg2')">
                 <path
                     d="M10.688 95.156C80.958 154.667 204.26 259.365 240.5 292.01c4.865 4.406 10.083 6.646 15.5 6.646 5.406 0 10.615-2.219 15.469-6.604 36.271-32.677 159.573-137.385 229.844-196.896 4.375-3.698 5.042-10.198 1.5-14.719C494.625 69.99 482.417 64 469.333 64H42.667c-13.083 0-25.292 5.99-33.479 16.438-3.542 4.52-2.875 11.02 1.5 14.718z" />
                 <path
@@ -39,7 +40,8 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { useUserStore } from '../stores/UserStore';
-
+import { Notification } from '@arco-design/web-vue';
+import { Space } from "@arco-design/web-vue";
 const { userInfo } = useUserStore();
 
 const visible = ref(false);
@@ -50,6 +52,7 @@ const isClicked = reactive({
     svg3: false
 });
 
+// 用户信息设置
 const handleClick = (svg) => {
     // 根据点击的SVG来更新对应的点击状态
     isClicked[svg] = !isClicked[svg];
@@ -66,7 +69,6 @@ const handleCancel = () => {
     resetClickedAndHideModal();
     visible.value = false;
 };
-
 const resetClickedAndHideModal = () => {
     for (const key in isClicked) {
         isClicked[key] = false;
@@ -74,6 +76,15 @@ const resetClickedAndHideModal = () => {
     visible.value = false;
 };
 
+// 邮箱通知
+const handleEmailNotification = () => {
+    Notification.info({
+        title: 'Notification',
+        content: 'This is a notification!',
+        closable: true,
+        style: { width: '300px' },
+    })
+};
 </script>
 
 <style scoped>
@@ -84,8 +95,5 @@ const resetClickedAndHideModal = () => {
 
 .clicked {
     background-color: #abaaa4ae;
-    /* 设置底色 */
-    cursor: pointer;
-    /* 添加手型光标 */
 }
 </style>
