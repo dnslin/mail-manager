@@ -1,6 +1,6 @@
 <template>
     <div class="user-profile-area">
-        <div class="task-manager">task manager</div>
+        <div class="task-manager">临时邮箱-管理</div>
         <div class="side-wrapper">
             <div class="user-profile">
                 <a-avatar :size="81">
