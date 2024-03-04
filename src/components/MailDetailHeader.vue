@@ -3,7 +3,7 @@
         <div class="mail-detail-profile">
             <img src="https://assets.codepen.io/3364143/Screen+Shot+2020-08-01+at+12.24.16.png" alt=""
                 class="members inbox-detail" />
-            <div class="mail-detail-name">Natalie Smith</div>
+            <div class="mail-detail-name">娜塔莉·史密斯</div>
         </div>
         <div class="mail-icons">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"

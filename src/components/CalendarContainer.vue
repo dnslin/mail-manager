@@ -57,7 +57,7 @@
                 <div class="day">14</div>
                 <div class="day project-market">15
                     <div class="hover-title">Marketing</div>
-                    <div class="project-detail">Write an article about design trends</div>
+                    <div class="project-detail">写一篇关于设计趋势的文章</div>
                     <div class="popup-check">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

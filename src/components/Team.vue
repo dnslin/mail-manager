@@ -2,17 +2,40 @@
     <div class="side-wrapper">
         <div class="project-title">Team</div>
         <div class="team-member">
-            <img src="https://images.unsplash.com/flagged/photo-1574282893982-ff1675ba4900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-                alt="" class="members">
-            <img src="https://assets.codepen.io/3364143/Screen+Shot+2020-08-01+at+12.24.16.png" alt="" class="members">
-            <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                alt="" class="members">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=998&q=80"
-                alt="" class="members">
-            <img src="https://images.unsplash.com/photo-1541647376583-8934aaf3448a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-                alt="" class="members">
+            <a-tooltip :content="sender.address" position="top" v-for="sender in senderRank" :key="sender.address" background-color="rgb(154, 199, 238)">
+                <img :src="sender.imgUrl" class="members">
+            </a-tooltip>
         </div>
-
     </div>
 </template>
 
+
+<script setup>
+import { reactive } from 'vue';
+// 发件人排名
+const senderRank = reactive([
+        { address: 'John@gmail.com', imgUrl: "https://pan.dnslin.com/d/189/img/a.webp" },
+        { address: 'Doe@testmail.com', imgUrl: "https://pan.dnslin.com/d/189/img/b.webp" },
+        { address: 'Jane@unioop.com', imgUrl: "https://pan.dnslin.com/d/189/img/c.webp" },
+        { address: 'Smith@qq.com', imgUrl: "https://pan.dnslin.com/d/189/img/d.webp" },
+        { address: 'Tom@live.cn', imgUrl: "https://pan.dnslin.com/d/189/img/e.webp" },
+    ]);
+
+</script>
+
+<style scoped>
+.members {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+} 
+.team-member {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: rgb(154, 199, 238);
+}
+
+</style>

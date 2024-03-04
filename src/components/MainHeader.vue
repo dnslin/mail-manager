@@ -1,7 +1,7 @@
 <template>
     <div class="header">
             <div class="search-bar">
-                <input type="text" placeholder="Search...">
+                <input type="text" placeholder="搜索...">
             </div>
             <div class="inbox-calendar" >
                 <input type="checkbox" @click="notifyParent" class="inbox-calendar-checkbox">
