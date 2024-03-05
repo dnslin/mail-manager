@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="add-task">
-            <button class="add-button">Add task</button>
+            <button class="add-button">新建邮件</button>
         </div>
     </div>
 </template>
